@@ -40,42 +40,55 @@ packer.init({
 
 -- Plugins
 return packer.startup(function(use)
-
     use 'wbthomason/packer.nvim' -- Have packer manage itself
-    use 'windwp/nvim-autopairs' -- Autopairs, integrates with both cmp and treesitter
 
+    -- UI
+    use { 'glepnir/dashboard-nvim' }
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
-    -- use { 'Mofiqul/dracula.nvim' } -- Theme dracula
-    use { 'folke/tokyonight.nvim' }
     use { 'kyazdani42/nvim-web-devicons' } -- Icons for telescope
     use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
+    --Themes
+    -- use { 'folke/tokyonight.nvim' }
+    use { 'Mofiqul/dracula.nvim' }
+    use { 'kaicataldo/material.vim' }
+
+    -- UX
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
     use { 'tpope/vim-commentary' } -- For Commenting gcc & gc
-    use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
-    use { 'nvim-lua/plenary.nvim' } -- telescope dependency
-    use { 'kyazdani42/nvim-tree.lua', } -- File explorer
-    use { 'akinsho/toggleterm.nvim' }
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
+    use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
+
+    -- Navigation
+    use { 'kyazdani42/nvim-tree.lua', } -- File explorer
+    use {
+        'nvim-telescope/telescope.nvim', -- Fuzzy finder
+        requires = { 'nvim-lua/plenary.nvim' }
+    }
+
+    -- Better terminal
+    use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle
+    use { 'kdheepak/lazygit.nvim' } -- Better view git
+
+    -- Completion
     use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
-    use { 'kdheepak/lazygit.nvim' }
-    -- use {
-    --     'williamboman/mason.nvim',
-    --     requires = {
-    --         -- LSP
-    --         'williamboman/mason-lspconfig.nvim',
-    --         'neovim/nvim-lspconfig',
-    --         -- DAP
-    --         'mfussenegger/nvim-dap',
-    --         -- Linters
-    --         'mfussenegger/nvim-lint',
-    --         -- Formaters
-    --         'mhartington/formatter.nvim',
-    --         -- Mason tools manager
-    --         'WhoIsSethDaniel/mason-tool-installer.nvim'
-    --     }
-    -- }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
 end)
+-- use {
+--     'williamboman/mason.nvim',
+--     requires = {
+--         -- LSP
+--         'williamboman/mason-lspconfig.nvim',
+--         'neovim/nvim-lspconfig',
+--         -- DAP
+--         'mfussenegger/nvim-dap',
+--         -- Linters
+--         'mfussenegger/nvim-lint',
+--         -- Formaters
+--         'mhartington/formatter.nvim',
+--         -- Mason tools manager
+--         'WhoIsSethDaniel/mason-tool-installer.nvim'
+--     }
+-- }

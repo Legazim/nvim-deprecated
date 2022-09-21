@@ -1,4 +1,4 @@
-local status_ok, toggleterm = pcall(require, "toggleterm")
+ocal status_ok, toggleterm = pcall(require, "toggleterm")
 if not status_ok then
     return
 end
@@ -13,7 +13,7 @@ toggleterm.setup {
     start_in_insert = true,
     insert_mappings = true,
     persist_size = true,
-    direction = "horizontal",
+    direction = "float",
     close_on_exit = true,
     shell = vim.o.shell,
     float_opts = {

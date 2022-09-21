@@ -43,7 +43,7 @@ map('n', '<C-j>', '<Cmd>move .+1<CR>')
 map('n', '<C-k>', '<Cmd>move .-2<CR>')
 map('x', '<C-j>', ":move '>+1<CR>gv=gv")
 map('x', '<C-k>', ":move '<-2<CR>gv=gv")
- 
+
 -- Telescope
 map('n', '<leader>f', '<Cmd>lua require("telescope.builtin").find_files()<cr>', {noremap = true})
 map('n', '<leader>g', '<Cmd>lua require("telescope.builtin").live_grep()<cr>', {noremap = true})
@@ -56,5 +56,5 @@ map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
 map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>')
 
 -- LazyGit
-map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
+map('n', '<leader>\\', '<Cmd>LazyGit<CR>')
 
