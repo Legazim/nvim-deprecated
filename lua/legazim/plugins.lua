@@ -54,14 +54,27 @@ return packer.startup(function(use)
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
     use { 'nvim-lua/plenary.nvim' } -- telescope dependency
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
-    use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
-    -- use { 'mattn/emmet-vim' } -- Emmet
-    use { 'williamboman/mason.nvim' }
-    use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
     use { 'akinsho/toggleterm.nvim' }
-    use { 'williamboman/mason-lspconfig.nvim' }
-    -- use { 'prettier/vim-prettier' } -- Prettier
-    -- use { 'dense-analysis/ale' }
+    use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
+    use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
+    use { 'kdheepak/lazygit.nvim' }
+    -- use {
+    --     'williamboman/mason.nvim',
+    --     requires = {
+    --         -- LSP
+    --         'williamboman/mason-lspconfig.nvim',
+    --         'neovim/nvim-lspconfig',
+    --         -- DAP
+    --         'mfussenegger/nvim-dap',
+    --         -- Linters
+    --         'mfussenegger/nvim-lint',
+    --         -- Formaters
+    --         'mhartington/formatter.nvim',
+    --         -- Mason tools manager
+    --         'WhoIsSethDaniel/mason-tool-installer.nvim'
+    --     }
+    -- }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end
