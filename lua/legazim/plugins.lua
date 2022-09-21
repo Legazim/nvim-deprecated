@@ -43,12 +43,14 @@ return packer.startup(function(use)
     use 'wbthomason/packer.nvim' -- Have packer manage itself
 
     -- UI
-    use { 'glepnir/dashboard-nvim' }
+    -- use { 'glepnir/dashboard-nvim' }
+    use { 'echasnovski/mini.nvim' } -- Start screen
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
     use { 'kyazdani42/nvim-web-devicons' } -- Icons for telescope
     use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
+
     --Themes
-    -- use { 'folke/tokyonight.nvim' }
+    use { 'folke/tokyonight.nvim' }
     use { 'Mofiqul/dracula.nvim' }
     use { 'kaicataldo/material.vim' }
 
@@ -76,19 +78,3 @@ return packer.startup(function(use)
         require("packer").sync()
     end
 end)
--- use {
---     'williamboman/mason.nvim',
---     requires = {
---         -- LSP
---         'williamboman/mason-lspconfig.nvim',
---         'neovim/nvim-lspconfig',
---         -- DAP
---         'mfussenegger/nvim-dap',
---         -- Linters
---         'mfussenegger/nvim-lint',
---         -- Formaters
---         'mhartington/formatter.nvim',
---         -- Mason tools manager
---         'WhoIsSethDaniel/mason-tool-installer.nvim'
---     }
--- }
