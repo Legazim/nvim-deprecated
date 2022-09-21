@@ -55,3 +55,6 @@ map('n', '<leader>n', '<Cmd>NvimTreeFocus<CR>')
 map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
 map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>')
 
+-- LazyGit
+map('n', '<leader>gg', '<Cmd>LazyGit<CR>')
+
