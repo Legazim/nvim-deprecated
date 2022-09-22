@@ -29,11 +29,12 @@ if not status_ok then
     return
 end
 
--- Plugins
 return packer.startup(function(use)
+
     use 'wbthomason/packer.nvim' -- Have packer manage itself
 
-    use { 'echasnovski/mini.nvim' } -- Start screen
+    use { 'echasnovski/mini.nvim' }
+
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
     use { 'kyazdani42/nvim-web-devicons' } -- Icons for telescope
@@ -54,8 +55,6 @@ return packer.startup(function(use)
 
     --Themes
     use { 'folke/tokyonight.nvim' }
-    -- use { 'Mofiqul/dracula.nvim' }
-    -- use { 'kaicataldo/material.vim' }
 
     -- UX
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
@@ -76,6 +75,12 @@ return packer.startup(function(use)
 
     -- Completion
     use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
+    use {
+        'folke/which-key.nvim',
+        config = function ()
+            require("which-key").setup()
+        end
+    }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

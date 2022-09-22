@@ -47,9 +47,9 @@ map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 -- Telescope
 map('n', '<leader>f', '<Cmd>lua require("telescope.builtin").find_files()<cr>', {noremap = true})
 map('n', '<leader>g', '<Cmd>lua require("telescope.builtin").live_grep()<cr>', {noremap = true})
-map('n', '<leader>h', '<Cmd>lua require("telescope.builtin").help_tags()<cr>', {noremap = true})
+map('n', '<leader>i', '<Cmd>lua require("telescope.builtin").help_tags()<cr>', {noremap = true})
 map('n', '<leader>;', '<Cmd>lua require("telescope.builtin").buffers()<cr>', {noremap = true})
-map('n', '<leader>o', '<Cmd>lua require("telescope.builtin").oldfiles()<cr>')
+map('n', '<leader>h', '<Cmd>lua require("telescope.builtin").oldfiles()<cr>')
 
 -- map('n', '<leader>q', ':NvimTreeCollapse<CR>')
 map('n', '<leader>n', '<Cmd>NvimTreeFocus<CR>')
@@ -58,4 +58,3 @@ map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>')
 
 -- LazyGit
 map('n', '<leader>\\', '<Cmd>LazyGit<CR>')
-
