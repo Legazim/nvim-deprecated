@@ -11,5 +11,6 @@ require('legazim.config.nvim-tree')
 require('legazim.config.telescope')
 require('legazim.config.toggleterm')
 require('legazim.config.trim')
+require('legazim.config.hop')
 
 vim.cmd('colorscheme tokyonight')

@@ -62,7 +62,10 @@ return packer.startup(function(use)
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
 
-    -- Navigation
+    -- navigation
+    use { 'phaazon/hop.nvim' }
+
+    -- File exploring
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
     use {
         'nvim-telescope/telescope.nvim', -- Fuzzy finder
@@ -80,6 +83,11 @@ return packer.startup(function(use)
         config = function ()
             require("which-key").setup()
         end
+    }
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim",
+        "neovim/nvim-lspconfig",
     }
 
     if PACKER_BOOTSTRAP then
