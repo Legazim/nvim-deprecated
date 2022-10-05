@@ -13,5 +13,3 @@ require('legazim.config.nvim-tree')
 require('legazim.config.telescope')
 require('legazim.config.toggleterm')
 require('legazim.config.trim')
-
--- Snipets

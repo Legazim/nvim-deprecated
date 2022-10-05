@@ -1,5 +1,10 @@
 local o = vim.o
 local g = vim.g
+local opt = vim.opt
+
+opt.list = true
+opt.listchars:append "space:⋅"
+opt.listchars:append "eol:↴"
 
 -- Map <leader> to space
 vim.g.maplocalleader = ' '
@@ -57,4 +62,3 @@ o.signcolumn = 'yes'
 
 -- Preserve view while jumping
 -- o.jumpoptions = 'view'
-

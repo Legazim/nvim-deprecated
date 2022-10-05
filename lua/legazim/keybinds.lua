@@ -3,18 +3,18 @@ local function map(mode, keybind, associated)
 end
 
 -- Use Alt + hjkl to resize windows
-map('n', '<M-k>', '<Cmd>resize +2<CR>', {noremap = true})
-map('n', '<M-j>', '<Cmd>resize -2<CR>', {noremap = true})
-map('n', '<M-l>', '<Cmd>vertical resize +2<CR>', {noremap = true})
-map('n', '<M-h>', '<Cmd>vertical resize -2<CR>', {noremap = true})
+map('n', '<M-k>', ':resize +2<CR>', {noremap = true})
+map('n', '<M-j>', ':resize -2<CR>', {noremap = true})
+map('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true})
+map('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true})
 
 -- Shortcut to normal mode
 map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
 
 -- Buffer navigation
-map('n', '<Tab>', '<Cmd>bn<Cr>')
-map('n', '<S-Tab>', '<Cmd>bp<Cr>')
+map('n', '<Tab>', ':bn<Cr>')
+map('n', '<S-Tab>', ':bp<Cr>')
 
 -- Better tabbing
 map('n', '<leader><', '<<')
@@ -42,31 +42,31 @@ map('n', '<leader>o', 'o<ESC>')
 map('n', '<leader>O', 'O<ESC>')
 
 -- Save file
-map('n', '<C-s>', '<CMD>w<CR>')
+map('n', '<C-s>', ':w<CR>')
 
 -- Quit neovim
-map('n', '<C-Q>', '<CMD>q<CR>')
+map('n', '<C-Q>', ':q<CR>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map('n', '<C-j>', '<Cmd>move .+1<CR>')
-map('n', '<C-k>', '<Cmd>move .-2<CR>')
+map('n', '<C-j>', ':move .+1<CR>')
+map('n', '<C-k>', ':move .-2<CR>')
 map('x', '<C-j>', ":move '>+1<CR>gv=gv")
 map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 
 -- Telescope
-map('n', '<leader>f', '<Cmd>lua require("telescope.builtin").find_files()<cr>')
-map('n', '<leader>i', '<Cmd>lua require("telescope.builtin").help_tags()<cr>')
-map('n', '<leader>;', '<Cmd>lua require("telescope.builtin").buffers()<cr>')
-map('n', '<leader>h', '<Cmd>lua require("telescope.builtin").oldfiles()<cr>')
+map('n', '<leader>f', ':lua require("telescope.builtin").find_files()<cr>')
+map('n', '<leader>i', ':lua require("telescope.builtin").help_tags()<cr>')
+map('n', '<leader>;', ':lua require("telescope.builtin").buffers()<cr>')
+map('n', '<leader>h', ':lua require("telescope.builtin").oldfiles()<cr>')
 
 -- NvimTree
-map('n', '<leader>n', '<Cmd>NvimTreeFocus<CR>')
-map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
-map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>')
+map('n', '<leader>n', ':NvimTreeFocus<CR>')
+map('n', '<leader>e', ':NvimTreeToggle<CR>')
+map('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
 -- LazyGit
-map('n', '<leader>\\', '<Cmd>LazyGit<CR>')
+map('n', '<leader>\\', ':LazyGit<CR>')
 
 -- Hop
 map('', 'f', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>")
