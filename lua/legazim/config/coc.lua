@@ -7,6 +7,7 @@ vim.g.coc_global_extensions = {
     'coc-prettier',
     'coc-json',
     'coc-html',
-    -- 'coc-pyright',
-    'coc-lua'
+    'coc-pyright',
+    'coc-lua',
+    'https://github.com/rafamadriz/friendly-snippets@main'
 }

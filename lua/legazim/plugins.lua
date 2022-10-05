@@ -31,7 +31,7 @@ end
 
 return packer.startup(function(use)
 
-    use 'wbthomason/packer.nvim' -- Have packer manage itself
+    use { 'wbthomason/packer.nvim' } -- Have packer manage itself
 
     use { 'echasnovski/mini.nvim' }
 
@@ -63,7 +63,12 @@ return packer.startup(function(use)
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
 
     -- navigation
-    use { 'phaazon/hop.nvim' }
+    use {
+        'phaazon/hop.nvim',
+        config = function ()
+            require'hop'.setup()
+        end
+    }
 
     -- File exploring
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer

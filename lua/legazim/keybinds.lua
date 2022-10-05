@@ -1,5 +1,5 @@
-local function map(m, k, v)
-    vim.keymap.set(m, k, v, { silent = true })
+local function map(mode, keybind, associated)
+    vim.keymap.set(mode, keybind, associated, { silent = true })
 end
 
 -- Use Alt + hjkl to resize windows
@@ -16,9 +16,16 @@ map('i', 'kj', '<ESC>', {noremap = true})
 map('n', '<Tab>', '<Cmd>bn<Cr>')
 map('n', '<S-Tab>', '<Cmd>bp<Cr>')
 
--- Better tabbing in visual mode
+-- Better tabbing
+map('n', '<leader><', '<<')
+map('n', '<leader>>', '>>')
 map('v', '<', '<gv')
 map('v', '>', '>gv')
+
+map('i', '<M-h>', '<C-o>h')
+map('i', '<M-k>', '<C-o>k')
+map('i', '<M-j>', '<C-o>j')
+map('i', '<M-l>', '<C-o>l')
 
 -- Fix * (Keep the cursor position, don't move to next match)
 map('n', '*', '*N')
@@ -26,6 +33,9 @@ map('n', '*', '*N')
 -- Fix n and N. Keeping cursor in center
 map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
+
+-- Easy dd
+map('n', '<leader>d', 'dd')
 
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')
@@ -45,16 +55,23 @@ map('x', '<C-j>', ":move '>+1<CR>gv=gv")
 map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 
 -- Telescope
-map('n', '<leader>f', '<Cmd>lua require("telescope.builtin").find_files()<cr>', {noremap = true})
-map('n', '<leader>g', '<Cmd>lua require("telescope.builtin").live_grep()<cr>', {noremap = true})
-map('n', '<leader>i', '<Cmd>lua require("telescope.builtin").help_tags()<cr>', {noremap = true})
-map('n', '<leader>;', '<Cmd>lua require("telescope.builtin").buffers()<cr>', {noremap = true})
+map('n', '<leader>f', '<Cmd>lua require("telescope.builtin").find_files()<cr>')
+map('n', '<leader>i', '<Cmd>lua require("telescope.builtin").help_tags()<cr>')
+map('n', '<leader>;', '<Cmd>lua require("telescope.builtin").buffers()<cr>')
 map('n', '<leader>h', '<Cmd>lua require("telescope.builtin").oldfiles()<cr>')
 
--- map('n', '<leader>q', ':NvimTreeCollapse<CR>')
+-- NvimTree
 map('n', '<leader>n', '<Cmd>NvimTreeFocus<CR>')
 map('n', '<leader>e', '<Cmd>NvimTreeToggle<CR>')
 map('n', '<C-f>', '<Cmd>NvimTreeFindFile<CR>')
 
 -- LazyGit
 map('n', '<leader>\\', '<Cmd>LazyGit<CR>')
+
+-- Hop
+map('', 'f', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>")
+map('', 'F', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>")
+map('', 't', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>")
+map('', 'T', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>")
+map('', '<leader>/', "<cmd>HopPattern<Cr>")
+map('', '<leader>j', "<cmd>HopWord<Cr>")
