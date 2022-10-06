@@ -13,15 +13,21 @@ map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
 
 -- Buffer navigation
-map('n', '<Tab>', ':bn<Cr>')
-map('n', '<S-Tab>', ':bp<Cr>')
+map('n', '<leader><Tab>', ':bn<Cr>')
+map('n', '<leader><S-Tab>', ':bp<Cr>')
 
 -- Better tabbing
+map('n', '<Tab>', '>>')
+map('n', '<S-Tab>', '<<')
 map('n', '<leader><', '<<')
 map('n', '<leader>>', '>>')
-map('v', '<', '<gv')
-map('v', '>', '>gv')
 
+map('v', '<Tab>', '>gv')
+map('v', '<S-Tab>', '<gv')
+map('v', '>', '>gv')
+map('v', '<', '<gv')
+
+-- Navigation in insert mode
 map('i', '<M-h>', '<C-o>h')
 map('i', '<M-k>', '<C-o>k')
 map('i', '<M-j>', '<C-o>j')

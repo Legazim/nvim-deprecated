@@ -58,6 +58,9 @@ o.splitright = true
 
 -- Coc
 o.shortmess = o.shortmess .. 'c'
+
+-- Always show the signcolumn, otherwise it would shift the text each time
+-- diagnostics appear/become resolved.
 o.signcolumn = 'yes'
 
 -- Preserve view while jumping
