@@ -29,7 +29,7 @@ keyset("i", "<C-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 keyset("i", "<Tab>", [[coc#pum#visible() ? coc#pum#confirm() : "<Tab>"]], opts)
 
 -- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+keyset("i", "<C-l>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion.
 keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
 

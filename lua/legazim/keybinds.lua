@@ -40,8 +40,8 @@ map('n', '*', '*N')
 map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
 
--- Easy dd
-map('n', '<leader>d', 'dd')
+-- Insert line
+map('n', 'K', 'i<Cr><Esc>k$')
 
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')
@@ -50,20 +50,25 @@ map('n', '<leader>O', 'O<ESC>')
 -- Save file
 map('n', '<C-s>', ':w<CR>')
 
--- Quit neovim
-map('n', '<C-Q>', ':q<CR>')
+-- Quit buffer
+map('n', '<C-q>', ':bd<Cr>')
+
+-- Comparing files
+map('n', '<leader>da', ':windo diffthis<Cr>')
+map('n', '<leader>dt', ':diffthis<Cr>')
+map('n', '<leader>do', ':windo diffoff<Cr>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
 map('n', '<C-j>', ':move .+1<CR>')
 map('n', '<C-k>', ':move .-2<CR>')
-map('x', '<C-j>', ":move '>+1<CR>gv=gv")
 map('x', '<C-k>', ":move '<-2<CR>gv=gv")
 
 -- Telescope
 map('n', '<leader>f', ':lua require("telescope.builtin").find_files()<cr>')
+map('n', '<leader>g', ':lua require("telescope.builtin").live_grep()<cr>')
 map('n', '<leader>i', ':lua require("telescope.builtin").help_tags()<cr>')
-map('n', '<leader>;', ':lua require("telescope.builtin").buffers()<cr>')
+map('n', '<leader>b', ':lua require("telescope.builtin").buffers()<cr>')
 map('n', '<leader>h', ':lua require("telescope.builtin").oldfiles()<cr>')
 
 -- NvimTree
@@ -80,4 +85,15 @@ map('', 'F', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'
 map('', 't', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>")
 map('', 'T', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>")
 map('', '<leader>/', "<cmd>HopPattern<Cr>")
+map('', '<leader>l', "<cmd>HopLineStart<Cr>")
+map('', '<leader>k', "<cmd>HopAnywhere<Cr>")
 map('', '<leader>j', "<cmd>HopWord<Cr>")
+
+local function CtrlZ()
+    if vim.fn.has('win32') then
+        return '<nop>'
+    else
+        return '<C-z>'
+    end
+end
+map('', '<C-z>', CtrlZ())
