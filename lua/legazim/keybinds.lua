@@ -1,27 +1,36 @@
-local function map(mode, keybind, associated)
-    vim.keymap.set(mode, keybind, associated, { silent = true })
+local function map(mode, keybind, associated, opts)
+    vim.keymap.set(mode, keybind, associated, opts or { silent = true })
 end
 
+-- Fix problem where, in windows powershell, <C-z> freezes the terminal
+local function CtrlZ()
+    if vim.fn.has('win32') then
+        return '<nop>'
+    else
+        return '<C-z>'
+    end
+end
+map('', '<C-z>', CtrlZ())
+
 -- Use Alt + hjkl to resize windows
-map('n', '<M-k>', ':resize +2<CR>', {noremap = true})
-map('n', '<M-j>', ':resize -2<CR>', {noremap = true})
-map('n', '<M-l>', ':vertical resize +2<CR>', {noremap = true})
-map('n', '<M-h>', ':vertical resize -2<CR>', {noremap = true})
+map('n', '<C-k>', ':resize +2<CR>', {noremap = true})
+map('n', '<C-j>', ':resize -2<CR>', {noremap = true})
+map('n', '<C-l>', ':vertical resize +2<CR>', {noremap = true})
+map('n', '<C-h>', ':vertical resize -2<CR>', {noremap = true})
 
 -- Shortcut to normal mode
 map('i', 'jk', '<ESC>', {noremap = true})
 map('i', 'kj', '<ESC>', {noremap = true})
 
 -- Buffer navigation
-map('n', '<leader><Tab>', ':bn<Cr>')
-map('n', '<leader><S-Tab>', ':bp<Cr>')
+map('n', '<leader>p', ':bn<Cr>')
+map('n', '<leader>q', ':bp<Cr>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')
 map('n', '<S-Tab>', '<<')
 map('n', '<leader><', '<<')
 map('n', '<leader>>', '>>')
-
 map('v', '<Tab>', '>gv')
 map('v', '<S-Tab>', '<gv')
 map('v', '>', '>gv')
@@ -39,6 +48,9 @@ map('n', '*', '*N')
 -- Fix n and N. Keeping cursor in center
 map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
+
+-- Clear search
+map('n', '<leader>cc', ':noh<CR>', { noremap = true, silent = true })
 
 -- Insert line
 map('n', 'K', 'i<Cr><Esc>k$')
@@ -60,9 +72,10 @@ map('n', '<leader>do', ':windo diffoff<Cr>')
 
 -- Move line up and down in NORMAL and VISUAL modes
 -- Reference: https://vim.fandom.com/wiki/Moving_lines_up_or_down
-map('n', '<C-j>', ':move .+1<CR>')
-map('n', '<C-k>', ':move .-2<CR>')
-map('x', '<C-k>', ":move '<-2<CR>gv=gv")
+map('n', '<M-j>', ':move .+1<CR>')
+map('n', '<M-k>', ':move .-2<CR>')
+map('x', '<M-j>', ":move '>+1<CR>gv=gv")
+map('x', '<M-k>', ":move '<-2<CR>gv=gv")
 
 -- Telescope
 map('n', '<leader>f', ':lua require("telescope.builtin").find_files()<cr>')
@@ -88,12 +101,3 @@ map('', '<leader>/', "<cmd>HopPattern<Cr>")
 map('', '<leader>l', "<cmd>HopLineStart<Cr>")
 map('', '<leader>k', "<cmd>HopAnywhere<Cr>")
 map('', '<leader>j', "<cmd>HopWord<Cr>")
-
-local function CtrlZ()
-    if vim.fn.has('win32') then
-        return '<nop>'
-    else
-        return '<C-z>'
-    end
-end
-map('', '<C-z>', CtrlZ())
