@@ -33,9 +33,16 @@ return packer.startup(function(use)
 
     use { 'wbthomason/packer.nvim' } -- Have packer manage itself
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used by lots of plugins
+    use { 'kyazdani42/nvim-web-devicons' } -- Icons
+    use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
+
+    -- Telescope
+    use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
+
+    -- NvimTree
+    use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
 	-- Cmp plugins
-    -- use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
 	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
 	use { 'hrsh7th/cmp-buffer' } -- buffer completions
 	use { 'hrsh7th/cmp-path' } -- path completions
@@ -49,30 +56,21 @@ return packer.startup(function(use)
     use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
 
     -- LSP
-    use { 'neovim/nvim-lspconfig' } -- enable LSP
     use { 'williamboman/mason.nvim' } -- simple to use language server installer
-
-    -- NvimTree
-    use { 'kyazdani42/nvim-tree.lua', } -- File explorer
-
-    -- Telescope
-    use {
-        'nvim-telescope/telescope.nvim', -- Fuzzy finder
-        requires = {
-            'kyazdani42/nvim-web-devicons' -- Icons
-        }
-    }
+    use { 'williamboman/mason-lspconfig.nvim' }
+    use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
+    use { 'neovim/nvim-lspconfig' } -- enable LSP
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
     use { 'petertriho/nvim-scrollbar' } -- Scrollbar
-    use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
     use {
         'akinsho/bufferline.nvim', -- Tabs for open buffers
         config = function ()
             require("bufferline").setup()
         end
     }
+
     use {
         'lewis6991/gitsigns.nvim',
         config = function ()
