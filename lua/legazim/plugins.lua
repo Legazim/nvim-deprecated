@@ -34,22 +34,23 @@ return packer.startup(function(use)
     use { 'wbthomason/packer.nvim' } -- Have packer manage itself
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used by lots of plugins
 
-    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scopek
-
 	-- Cmp plugins
     -- use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
+	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
 	use { 'hrsh7th/cmp-buffer' } -- buffer completions
 	use { 'hrsh7th/cmp-path' } -- path completions
-    use { 'hrsh7th/cmp-cmdline' }
-	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-
-	use { 'hrsh7th/cmp-nvim-lsp' }
-	use { 'hrsh7th/cmp-nvim-lua' }
+    use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
+	use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
+	use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
 
     -- Snippets
     use { 'L3MON4D3/LuaSnip' } -- Snippets engine
 	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
     use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
+
+    -- LSP
+    use { 'neovim/nvim-lspconfig' } -- enable LSP
+    use { 'williamboman/mason.nvim' } -- simple to use language server installer
 
     -- NvimTree
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
@@ -83,6 +84,7 @@ return packer.startup(function(use)
     use { 'folke/tokyonight.nvim' }
 
     -- UX
+    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scopek
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
