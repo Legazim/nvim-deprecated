@@ -39,3 +39,11 @@ mason.setup({
 })
 
 require("mason-lspconfig").setup({})
+
+-- local lspconfig = require("lspconfig")
+
+-- require("mason-lspconfig").setup_handlers {
+--     function (server_name)
+--         lspconfig[server.name].setup {}
+--     end,
+-- }

@@ -31,7 +31,7 @@ o.ruler = true
 o.cmdheight = 2
 o.laststatus = 0
 g.foldcolumn = 1
-o.mouse = 'a'
+-- o.mouse = 'a'
 
 -- Editing experience
 o.expandtab = true

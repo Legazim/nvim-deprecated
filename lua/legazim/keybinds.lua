@@ -53,7 +53,7 @@ map('n', 'N', 'Nzz')
 map('n', '<leader>cc', ':noh<CR>', { noremap = true, silent = true })
 
 -- Insert line
-map('n', 'K', 'i<Cr><Esc>k$')
+-- map('n', 'K', 'i<Cr><Esc>k$')
 
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')

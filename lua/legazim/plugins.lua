@@ -41,23 +41,24 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
 	-- Cmp plugins
-	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-	use { 'hrsh7th/cmp-buffer' } -- buffer completions
-	use { 'hrsh7th/cmp-path' } -- path completions
-    use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
-	use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
-	use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
+    use { 'neoclide/coc.nvim', branch = 'release' } -- Completion
+	-- use { 'hrsh7th/nvim-cmp' } -- The completion plugin
+	-- use { 'hrsh7th/cmp-buffer' } -- buffer completions
+	-- use { 'hrsh7th/cmp-path' } -- path completions
+	-- use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
+	-- use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
+	-- use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
 
     -- Snippets
-    use { 'L3MON4D3/LuaSnip' } -- Snippets engine
-	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
-    use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
+	--    use { 'L3MON4D3/LuaSnip' } -- Snippets engine
+	-- use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
+	--    use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
 
     -- LSP
+    use { 'neovim/nvim-lspconfig' } -- enable LSP
     use { 'williamboman/mason.nvim' } -- simple to use language server installer
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
-    use { 'neovim/nvim-lspconfig' } -- enable LSP
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
