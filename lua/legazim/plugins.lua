@@ -36,10 +36,8 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-web-devicons' } -- Icons
     use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
 
-    -- Telescope
+    -- Navigation
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
-
-    -- NvimTree
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
 	-- Cmp plugins
@@ -71,6 +69,8 @@ return packer.startup(function(use)
         end
     }
 
+    -- Visual aids
+    -- use { 'folke/trouble.nvim' } -- Error lens
     use {
         'lewis6991/gitsigns.nvim',
         config = function ()
