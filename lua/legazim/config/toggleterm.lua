@@ -5,7 +5,7 @@ end
 
 toggleterm.setup {
     size = 20,
-    open_mapping = [[<C-\>]],
+    open_mapping = [[<C-;>]],
     hide_numbers = true,
     shade_filetypes = {},
     shade_terminals = true,
@@ -37,4 +37,3 @@ function _G.set_terminal_keymaps()
     vim.api.nvim_buf_set_keymap(0, "t", "<m-k>", [[<C-\><C-n><C-W>k]], opts)
     vim.api.nvim_buf_set_keymap(0, "t", "<m-l>", [[<C-\><C-n><C-W>l]], opts)
 end
-

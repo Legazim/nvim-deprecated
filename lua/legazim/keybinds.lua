@@ -13,14 +13,14 @@ end
 map('', '<C-z>', CtrlZ())
 
 -- Use Alt + hjkl to resize windows
-map('n', '<C-k>', ':resize +2<CR>', {noremap = true})
-map('n', '<C-j>', ':resize -2<CR>', {noremap = true})
-map('n', '<C-l>', ':vertical resize +2<CR>', {noremap = true})
-map('n', '<C-h>', ':vertical resize -2<CR>', {noremap = true})
+map('n', '<C-k>', ':resize +2<CR>', { noremap = true })
+map('n', '<C-j>', ':resize -2<CR>', { noremap = true })
+map('n', '<C-l>', ':vertical resize +2<CR>', { noremap = true })
+map('n', '<C-h>', ':vertical resize -2<CR>', { noremap = true })
 
 -- Shortcut to normal mode
-map('i', 'jk', '<ESC>', {noremap = true})
-map('i', 'kj', '<ESC>', {noremap = true})
+map('i', 'jk', '<ESC>', { noremap = true })
+map('i', 'kj', '<ESC>', { noremap = true })
 
 -- Buffer navigation
 map('n', '<leader>p', ':bn<Cr>')
@@ -90,7 +90,7 @@ map('n', '<leader>e', ':NvimTreeToggle<CR>')
 map('n', '<C-f>', ':NvimTreeFindFile<CR>')
 
 -- LazyGit
-map('n', '<leader>\\', ':LazyGit<CR>')
+map('n', '<leader>;', ':LazyGit<CR>')
 
 -- Hop
 map('', 'f', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>")
