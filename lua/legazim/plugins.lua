@@ -38,15 +38,17 @@ return packer.startup(function(use)
 
 	-- Cmp plugins
     -- use { 'neoclide/coc.nvim', branch = 'release' } -- Intelisense
-	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
 	use { 'hrsh7th/cmp-buffer' } -- buffer completions
 	use { 'hrsh7th/cmp-path' } -- path completions
-	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
+    use { 'hrsh7th/cmp-cmdline' }
+	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
+
 	use { 'hrsh7th/cmp-nvim-lsp' }
 	use { 'hrsh7th/cmp-nvim-lua' }
 
     -- Snippets
     use { 'L3MON4D3/LuaSnip' } -- Snippets engine
+	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
     use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
 
     -- NvimTree

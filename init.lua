@@ -7,7 +7,6 @@ vim.cmd('colorscheme tokyonight')
 
 -- Plugins config
 -- require('legazim.config.coc')
-require('legazim.config.cmp')
 require('legazim.config.trim')
 require('legazim.config.lualine')
 require('legazim.config.mini-nvim')
@@ -15,3 +14,4 @@ require('legazim.config.nvim-tree')
 require('legazim.config.telescope')
 require('legazim.config.toggleterm')
 require('legazim.config.scrollbar')
+require('legazim.config.cmp')
