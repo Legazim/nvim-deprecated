@@ -23,8 +23,8 @@ map('i', 'jk', '<ESC>', { noremap = true })
 map('i', 'kj', '<ESC>', { noremap = true })
 
 -- Buffer navigation
-map('n', '<leader>p', ':bn<Cr>')
-map('n', '<leader>q', ':bp<Cr>')
+map('n', '<C-9>', ':bn<Cr>')
+map('n', '<C-0>', ':bp<Cr>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')
