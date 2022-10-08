@@ -1,9 +1,9 @@
-local snip_status_ok, lualine = pcall(require, "lualine")
+local snip_status_ok, lualine = pcall(require, 'lualine')
 if not snip_status_ok then
     return
 end
 
-require('lualine').setup {
+lualine.setup {
     options = {
         icons_enabled = true,
         theme = 'auto',

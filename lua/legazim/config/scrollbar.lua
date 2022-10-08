@@ -1,6 +1,11 @@
+local snip_status_ok, scrollbar = pcall(require, "scrollbar")
+if not snip_status_ok then
+    return
+end
+
 local colors = require("tokyonight.colors").setup()
 
-require("scrollbar").setup({
+scrollbar.setup({
     handle = {
         color = colors.bg_highlight,
     },

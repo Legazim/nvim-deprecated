@@ -7,8 +7,8 @@ opt.listchars:append "space:⋅"
 opt.listchars:append "eol:↴"
 
 -- Map <leader> to space
-vim.g.maplocalleader = ' '
-vim.g.mapleader = ' '
+g.maplocalleader = ' '
+g.mapleader = ' '
 
 o.hidden = true
 o.encoding = 'utf-8'
