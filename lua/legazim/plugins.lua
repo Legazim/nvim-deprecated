@@ -41,18 +41,18 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
 	-- Cmp plugins
-    use { 'neoclide/coc.nvim', branch = 'release' } -- Completion
-	-- use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-	-- use { 'hrsh7th/cmp-buffer' } -- buffer completions
-	-- use { 'hrsh7th/cmp-path' } -- path completions
-	-- use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
-	-- use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
-	-- use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
+    -- use { 'neoclide/coc.nvim', branch = 'release' } -- Completion
+	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
+	use { 'hrsh7th/cmp-buffer' } -- buffer completions
+	use { 'hrsh7th/cmp-path' } -- path completions
+	use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
+	use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
+	use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
 
     -- Snippets
-	--    use { 'L3MON4D3/LuaSnip' } -- Snippets engine
-	-- use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
-	--    use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
+    use { 'L3MON4D3/LuaSnip' } -- Snippets engine
+	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
+    use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
 
     -- LSP
     use { 'neovim/nvim-lspconfig' } -- enable LSP
@@ -71,7 +71,7 @@ return packer.startup(function(use)
     }
 
     -- Visual aids
-    -- use { 'folke/trouble.nvim' } -- Error lens
+    use { 'folke/trouble.nvim' } -- Error lens
     use {
         'lewis6991/gitsigns.nvim',
         config = function ()
@@ -83,7 +83,7 @@ return packer.startup(function(use)
     use { 'folke/tokyonight.nvim' }
 
     -- UX
-    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scopek
+    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scope
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
