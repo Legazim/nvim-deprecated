@@ -41,7 +41,6 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
 	-- Cmp plugins
-    -- use { 'neoclide/coc.nvim', branch = 'release' } -- Completion
 	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
 	use { 'hrsh7th/cmp-buffer' } -- buffer completions
 	use { 'hrsh7th/cmp-path' } -- path completions
@@ -62,12 +61,12 @@ return packer.startup(function(use)
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
-    use { 'petertriho/nvim-scrollbar' } -- Scrollbar
-    use { 'akinsho/bufferline.nvim', -- Tabs for open buffers
-        config = function ()
-            require("bufferline").setup()
-        end
-    }
+    -- use { 'petertriho/nvim-scrollbar' } -- Scrollbar
+    -- use { 'akinsho/bufferline.nvim', -- Tabs for open buffers
+    --     config = function ()
+    --         require("bufferline").setup()
+    --     end
+    -- }
 
     -- Visual aids
     use { 'folke/trouble.nvim' } -- Error lens
@@ -86,6 +85,7 @@ return packer.startup(function(use)
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
+
     use {
         'folke/which-key.nvim',
         config = function ()
@@ -104,7 +104,7 @@ return packer.startup(function(use)
 
     -- Better terminal
     -- use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle
-    use { 'numToStr/FTerm.nvim' }
+    -- use { 'numToStr/FTerm.nvim' }
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     if PACKER_BOOTSTRAP then
