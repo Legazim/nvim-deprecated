@@ -5,6 +5,13 @@ end
 
 local actions = require('telescope.actions')
 
+-- Keybinds
+vim.keymap.set('n', '<leader>f', '<cmd>Telescope find_files<cr>', {})
+vim.keymap.set('n', '<leader>g', '<cmd>Telescope live_grep<cr>', {})
+vim.keymap.set('n', '<leader>i', '<cmd>Telescope help_tags<cr>', {})
+vim.keymap.set('n', '<leader>b', '<cmd>Telescope buffers<cr>', {})
+vim.keymap.set('n', '<leader>h', '<cmd>Telescope oldfiles<cr>', {})
+
 telescope.setup {
     defaults = {
         layout_config = {

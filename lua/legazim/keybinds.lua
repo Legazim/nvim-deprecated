@@ -1,8 +1,9 @@
 local function map(mode, keybind, associated, opts)
-    vim.keymap.set(mode, keybind, associated, opts or { silent = true })
+    local options = opts or { silent = true }
+    vim.keymap.set(mode, keybind, associated, options)
 end
 
--- Fix problem where, in windows powershell, <C-z> freezes the terminal
+-- Fix problem where <C-z> freezes the terminal (in windows powershell)
 local function CtrlZ()
     if vim.fn.has('win32') then
         return '<nop>'
@@ -13,18 +14,18 @@ end
 map('', '<C-z>', CtrlZ())
 
 -- Use Alt + hjkl to resize windows
-map('n', '<C-k>', ':resize +2<CR>', { noremap = true })
-map('n', '<C-j>', ':resize -2<CR>', { noremap = true })
-map('n', '<C-l>', ':vertical resize +2<CR>', { noremap = true })
-map('n', '<C-h>', ':vertical resize -2<CR>', { noremap = true })
+map('n', '<C-k>', ':resize +2<CR>')
+map('n', '<C-j>', ':resize -2<CR>')
+map('n', '<C-l>', ':vertical resize +2<CR>')
+map('n', '<C-h>', ':vertical resize -2<CR>')
 
 -- Shortcut to normal mode
-map('i', 'jk', '<ESC>', { noremap = true })
-map('i', 'kj', '<ESC>', { noremap = true })
+map('i', 'jk', '<ESC>')
+map('i', 'kj', '<ESC>')
 
 -- Buffer navigation
-map('n', '<C-9>', ':bn<Cr>')
-map('n', '<C-0>', ':bp<Cr>')
+map('n', '<leader>[', ':bp<Cr>')
+map('n', '<leader>]', ':bn<Cr>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')
@@ -50,10 +51,10 @@ map('n', 'n', 'nzz')
 map('n', 'N', 'Nzz')
 
 -- Clear search
-map('n', '<leader>cc', ':noh<CR>', { noremap = true, silent = true })
+map('n', '<leader>cc', ':noh<CR>')
 
 -- Insert line
--- map('n', 'K', 'i<Cr><Esc>k$')
+map('n', 'K', 'i<Cr><Esc>k$')
 
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')
@@ -76,13 +77,6 @@ map('n', '<M-j>', ':move .+1<CR>')
 map('n', '<M-k>', ':move .-2<CR>')
 map('x', '<M-j>', ":move '>+1<CR>gv=gv")
 map('x', '<M-k>', ":move '<-2<CR>gv=gv")
-
--- Telescope
-map('n', '<leader>f', ':lua require("telescope.builtin").find_files()<cr>')
-map('n', '<leader>g', ':lua require("telescope.builtin").live_grep()<cr>')
-map('n', '<leader>i', ':lua require("telescope.builtin").help_tags()<cr>')
-map('n', '<leader>b', ':lua require("telescope.builtin").buffers()<cr>')
-map('n', '<leader>h', ':lua require("telescope.builtin").oldfiles()<cr>')
 
 -- NvimTree
 map('n', '<leader>n', ':NvimTreeFocus<CR>')

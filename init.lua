@@ -3,6 +3,7 @@ require('legazim.options')
 require('legazim.plugins')
 require('legazim.keybinds')
 require('legazim.colorscheme')
+
 -- Plugins configuration
 require('legazim.config.cmp')
 require('legazim.config.trim')
