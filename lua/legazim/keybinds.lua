@@ -14,18 +14,24 @@ end
 map('', '<C-z>', CtrlZ())
 
 -- Use Alt + hjkl to resize windows
-map('n', '<C-k>', ':resize +2<CR>')
-map('n', '<C-j>', ':resize -2<CR>')
-map('n', '<C-l>', ':vertical resize +2<CR>')
-map('n', '<C-h>', ':vertical resize -2<CR>')
+map('n', '<M-Down>', ':resize -2<CR>')
+map('n', '<M-Up>', ':resize +2<CR>')
+map('n', '<M-Right>', ':vertical resize +2<CR>')
+map('n', '<M-Left>', ':vertical resize -2<CR>')
+
+-- Better window navigation
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
 
 -- Shortcut to normal mode
 map('i', 'jk', '<ESC>')
 map('i', 'kj', '<ESC>')
 
 -- Buffer navigation
-map('n', '<leader>[', ':bp<Cr>')
-map('n', '<leader>]', ':bn<Cr>')
+map('n', '<S-l>', ':bn<Cr>')
+map('n', '<S-h>', ':bp<Cr>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')

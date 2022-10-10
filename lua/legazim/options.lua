@@ -19,7 +19,7 @@ o.timeoutlen = 500
 o.updatetime = 300
 
 -- Number of screen lines to keep above and below the cursor
-o.scrolloff = 3
+o.scrolloff = 5
 
 -- UI preferences
 o.number = true

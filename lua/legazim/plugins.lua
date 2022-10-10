@@ -104,7 +104,8 @@ return packer.startup(function(use)
     }
 
     -- Better terminal
-    use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle
+    -- use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle
+    use { 'numToStr/FTerm.nvim' }
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     if PACKER_BOOTSTRAP then
