@@ -8,6 +8,7 @@ require('legazim.cmp')
 require('legazim.lsp')
 -- Plugins configuration
 require('legazim.config.trim')
+require('legazim.config.treesitter')
 require('legazim.config.lualine')
 require('legazim.config.mini')
 require('legazim.config.nvimtree')

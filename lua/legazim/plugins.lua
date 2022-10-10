@@ -34,7 +34,7 @@ return packer.startup(function(use)
     use { 'wbthomason/packer.nvim' } -- Have packer manage itself
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used by lots of plugins
     use { 'kyazdani42/nvim-web-devicons' } -- Icons
-    use { 'nvim-treesitter/nvim-treesitter' } -- Better highlighting
+    use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" } -- Better highlighting
 
     -- Navigation
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
@@ -63,8 +63,7 @@ return packer.startup(function(use)
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
     use { 'petertriho/nvim-scrollbar' } -- Scrollbar
-    use {
-        'akinsho/bufferline.nvim', -- Tabs for open buffers
+    use { 'akinsho/bufferline.nvim', -- Tabs for open buffers
         config = function ()
             require("bufferline").setup()
         end
