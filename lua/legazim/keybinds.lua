@@ -84,20 +84,5 @@ map('n', '<M-k>', ':move .-2<CR>')
 map('x', '<M-j>', ":move '>+1<CR>gv=gv")
 map('x', '<M-k>', ":move '<-2<CR>gv=gv")
 
--- NvimTree
-map('n', '<leader>n', ':NvimTreeFocus<CR>')
-map('n', '<leader>e', ':NvimTreeToggle<CR>')
-map('n', '<C-f>', ':NvimTreeFindFile<CR>')
-
 -- LazyGit
 map('n', '<leader>;', ':LazyGit<CR>')
-
--- Hop
-map('', 'f', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true })<cr>")
-map('', 'F', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true })<cr>")
-map('', 't', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.AFTER_CURSOR, current_line_only = true, hint_offset = -1 })<cr>")
-map('', 'T', "<cmd>lua require('hop').hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>")
-map('', '<leader>/', "<cmd>HopPattern<Cr>")
-map('', '<leader>l', "<cmd>HopLineStart<Cr>")
-map('', '<leader>k', "<cmd>HopAnywhere<Cr>")
-map('', '<leader>j', "<cmd>HopWord<Cr>")

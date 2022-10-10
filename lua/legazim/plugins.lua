@@ -58,24 +58,16 @@ return packer.startup(function(use)
     use { 'williamboman/mason.nvim' } -- simple to use language server installer
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
+    use { 'jose-elias-alvarez/null-ls.nvim' }  -- for formatters and linters
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
-    -- use { 'petertriho/nvim-scrollbar' } -- Scrollbar
-    -- use { 'akinsho/bufferline.nvim', -- Tabs for open buffers
-    --     config = function ()
-    --         require("bufferline").setup()
-    --     end
-    -- }
+    use { 'petertriho/nvim-scrollbar' } -- Scrollbar
+    use { 'akinsho/bufferline.nvim' } -- Tabs for open buffers
 
     -- Visual aids
     use { 'folke/trouble.nvim' } -- Error lens
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function ()
-            require('gitsigns').setup()
-        end
-    }
+    use { 'lewis6991/gitsigns.nvim' }
 
     --Theme
     use { 'folke/tokyonight.nvim' }
@@ -85,22 +77,11 @@ return packer.startup(function(use)
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     use { 'cappyzawa/trim.nvim' } -- Trim whitespace
-
-    use {
-        'folke/which-key.nvim',
-        config = function ()
-            require("which-key").setup()
-        end
-    }
+    use { 'folke/which-key.nvim' }
 
     -- navigation
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
-    use {
-        'phaazon/hop.nvim', -- Hop
-        config = function ()
-            require'hop'.setup()
-        end
-    }
+    use { 'phaazon/hop.nvim' } -- Hop
 
     -- Better terminal
     -- use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle

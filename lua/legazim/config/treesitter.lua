@@ -10,6 +10,6 @@ configs.setup({
 	autopairs = { enable = true, },
 	indent = {
         enable = true,
-        -- disable = { "python", "css" }
+        disable = { "python", "css" }
     },
 })

@@ -3,6 +3,11 @@ if not status_ok then
     return
 end
 
+local opts = { noremap = true, silent = true }
+vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<CR>', opts)
+vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', opts)
+
 lualine.setup({
     filters = {
         dotfiles = false,
