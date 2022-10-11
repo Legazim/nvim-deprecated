@@ -1,10 +1,5 @@
 local o = vim.o
 local g = vim.g
-local opt = vim.opt
-
-opt.list = true
-opt.listchars:append "space:⋅"
-opt.listchars:append "eol:↴"
 
 -- Map <leader> to space
 g.maplocalleader = ' '
@@ -31,7 +26,7 @@ o.ruler = true
 o.cmdheight = 2
 o.laststatus = 0
 g.foldcolumn = 1
--- o.mouse = 'a'
+o.mouse = 'a'
 
 -- Editing experience
 o.expandtab = true

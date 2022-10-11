@@ -40,7 +40,7 @@ return packer.startup(function(use)
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
-	-- Cmp plugins
+    -- Cmp plugins
 	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
 	use { 'hrsh7th/cmp-buffer' } -- buffer completions
 	use { 'hrsh7th/cmp-path' } -- path completions
@@ -67,10 +67,14 @@ return packer.startup(function(use)
 
     -- Visual aids
     use { 'folke/trouble.nvim' } -- Error lens
-    use { 'lewis6991/gitsigns.nvim' }
+    use { 'lewis6991/gitsigns.nvim' } -- See changes since last commit
+    use { 'NvChad/nvim-colorizer.lua' } -- Colors
+    use { 'lukas-reineke/indent-blankline.nvim' } -- indent lines
+    use { 'p00f/nvim-ts-rainbow' } -- Backets pairs
 
-    --Theme
+    --Themes
     use { 'folke/tokyonight.nvim' }
+    use { 'Mofiqul/dracula.nvim' }
 
     -- UX
     use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scope
@@ -84,8 +88,6 @@ return packer.startup(function(use)
     use { 'phaazon/hop.nvim' } -- Hop
 
     -- Better terminal
-    -- use { 'akinsho/toggleterm.nvim' } -- Enable terminal toggle
-    -- use { 'numToStr/FTerm.nvim' }
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     if PACKER_BOOTSTRAP then

@@ -22,25 +22,25 @@ else
     return
 end
 
-local indentscope_ok, indent_scope = pcall(require, 'mini.indentscope')
-if indentscope_ok then
-    indent_scope.setup({
-        draw = {
-            delay = 0,
-        },
-        gen_animation = 'none',
-        mappings = {
-            goto_top = '[i',
-            goto_bottom = ']i',
-        },
-        options = {
-            indent_at_cursor = false,
-            try_as_border = true,
-        },
-
-        -- Which character to use for drawing scope indicator
-        symbol = '╎',
-    })
-else
-    return
-end
+-- local indentscope_ok, indent_scope = pcall(require, 'mini.indentscope')
+-- if indentscope_ok then
+--     indent_scope.setup({
+--         draw = {
+--             delay = 0,
+--         },
+--         gen_animation = 'none',
+--         mappings = {
+--             goto_top = '[i',
+--             goto_bottom = ']i',
+--         },
+--         options = {
+--             indent_at_cursor = false,
+--             try_as_border = true,
+--         },
+--
+--         -- Which character to use for drawing scope indicator
+--         symbol = '╎',
+--     })
+-- else
+--     return
+-- end

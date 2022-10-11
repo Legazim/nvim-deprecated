@@ -14,11 +14,13 @@ mason_tool_installer.setup({
         "pyright",
         "sqlls",
         "typescript-language-server",
+        "python-lsp-server",
         -- Formatter
         "prettier",
         "stylua",
         -- Linter
         "eslint_d",
+        "black",
         "shellcheck",
         "tflint",
         -- DAP

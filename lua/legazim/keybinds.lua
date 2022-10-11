@@ -19,19 +19,19 @@ map('n', '<M-Up>', ':resize +2<CR>')
 map('n', '<M-Right>', ':vertical resize +2<CR>')
 map('n', '<M-Left>', ':vertical resize -2<CR>')
 
--- Better window navigation
-map('n', '<C-h>', '<C-w>h')
-map('n', '<C-j>', '<C-w>j')
-map('n', '<C-k>', '<C-w>k')
-map('n', '<C-l>', '<C-w>l')
+-- -- Better window navigation
+-- map('n', '<C-h>', '<C-w>h')
+-- map('n', '<C-j>', '<C-w>j')
+-- map('n', '<C-k>', '<C-w>k')
+-- map('n', '<C-l>', '<C-w>l')
 
 -- Shortcut to normal mode
 map('i', 'jk', '<ESC>')
 map('i', 'kj', '<ESC>')
 
 -- Buffer navigation
-map('n', '<S-l>', ':bn<Cr>')
-map('n', '<S-h>', ':bp<Cr>')
+map('n', '<C-l>', ':bn<Cr>')
+map('n', '<C-h>', ':bp<Cr>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')
