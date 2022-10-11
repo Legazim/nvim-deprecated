@@ -7,6 +7,7 @@ require('legazim.colorscheme')
 require('legazim.cmp')
 require('legazim.lsp')
 -- Plugins configuration
+require('legazim.config.autopairs')
 require('legazim.config.bufferline')
 require('legazim.config.gitsigns')
 require('legazim.config.hop')
