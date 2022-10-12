@@ -3,7 +3,17 @@ if not status_ok then
   return
 end
 
-trouble.setup()
+trouble.setup({
+    action_keys = {
+        toggle_fold = { '<leader>s' }
+    },
+    signs = {
+        error = ' ',
+        warning = ' ',
+        hint = ' ',
+        information = ' '
+    }
+})
 
 vim.keymap.set("n", "<leader>xx", "<cmd>TroubleToggle<cr>", {silent = true, noremap = true})
 vim.keymap.set("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", {silent = true, noremap = true})

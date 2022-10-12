@@ -80,7 +80,7 @@ return packer.startup(function(use)
     use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scope
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
-    -- use { 'cappyzawa/trim.nvim' } -- Trim whitespace
+    -- TODO: Add trimmer for whitespace
     use { 'folke/which-key.nvim' }
 
     -- navigation
