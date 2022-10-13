@@ -3,6 +3,7 @@ require('legazim.options')
 require('legazim.plugins')
 require('legazim.keybinds')
 require('legazim.colorscheme')
+require('legazim.autocmd')
 -- Code completion and LSP
 require('legazim.cmp')
 require('legazim.lsp')
