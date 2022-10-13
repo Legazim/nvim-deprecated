@@ -77,7 +77,7 @@ return packer.startup(function(use)
     use { 'Mofiqul/dracula.nvim' }
 
     -- UX
-    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor, indent scope
+    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor and starting screen
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     -- TODO: Add trimmer for whitespace
