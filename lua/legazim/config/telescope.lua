@@ -11,6 +11,7 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {})
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', {})
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {})
 vim.keymap.set('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 telescope.setup {
     defaults = {
