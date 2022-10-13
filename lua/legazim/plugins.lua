@@ -41,16 +41,16 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
 
     -- Cmp plugins
-	use { 'hrsh7th/nvim-cmp' } -- The completion plugin
-	use { 'hrsh7th/cmp-buffer' } -- buffer completions
-	use { 'hrsh7th/cmp-path' } -- path completions
-	use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
-	use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
-	use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
+    use { 'hrsh7th/nvim-cmp' } -- The completion plugin
+    use { 'hrsh7th/cmp-buffer' } -- buffer completions
+    use { 'hrsh7th/cmp-path' } -- path completions
+    use { 'hrsh7th/cmp-cmdline' } -- Cmdline completions
+    use { 'hrsh7th/cmp-nvim-lua' } -- Lua completions
+    use { 'hrsh7th/cmp-nvim-lsp' } -- Lsp completions
 
     -- Snippets
     use { 'L3MON4D3/LuaSnip' } -- Snippets engine
-	use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
+    use { 'saadparwaiz1/cmp_luasnip' } -- snippet completions
     use { 'rafamadriz/friendly-snippets' } -- Snippets for multiple languages
 
     -- LSP
@@ -58,7 +58,7 @@ return packer.startup(function(use)
     use { 'williamboman/mason.nvim' } -- simple to use language server installer
     use { 'williamboman/mason-lspconfig.nvim' }
     use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
-    use { 'jose-elias-alvarez/null-ls.nvim' }  -- for formatters and linters
+    use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters and linters
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
@@ -88,7 +88,7 @@ return packer.startup(function(use)
     use { 'phaazon/hop.nvim' } -- Hop
 
     -- Better terminal
-    use { 'akinsho/toggleterm.nvim', tag = '*' } -- Toggle the terminal
+    use { 'akinsho/toggleterm.nvim' } -- Toggle the terminal
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     if PACKER_BOOTSTRAP then

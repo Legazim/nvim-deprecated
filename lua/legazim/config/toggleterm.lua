@@ -14,7 +14,7 @@ toggleterm.setup {
     insert_mappings = true,
     persist_size = true,
     close_on_exit = true,
-    -- shell = vim.o.shell,
+    shell = vim.o.shell,
     direction = 'horizontal', -- 'vertical' | 'horizontal' | 'window' | 'float',
     float_opts = { -- Only relevant in float
         border = "curved",
@@ -25,10 +25,10 @@ toggleterm.setup {
         },
     },
     winblend = 3,
-    highlights = {
-        border = "Normal",
-        background = "Normal",
-    }
+    -- highlights = {
+    --     border = "Normal",
+    --     background = "Normal",
+    -- }
 }
 
 function _G.set_terminal_keymaps()
@@ -42,3 +42,5 @@ function _G.set_terminal_keymaps()
     vim.api.nvim_buf_set_keymap(0, "t", "<m-k>", [[<C-\><C-n><C-W>k]], opts)
     vim.api.nvim_buf_set_keymap(0, "t", "<m-l>", [[<C-\><C-n><C-W>l]], opts)
 end
+
+vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
