@@ -88,6 +88,7 @@ return packer.startup(function(use)
     use { 'phaazon/hop.nvim' } -- Hop
 
     -- Better terminal
+    use { 'akinsho/toggleterm.nvim', tag = '*' } -- Toggle the terminal
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     if PACKER_BOOTSTRAP then
