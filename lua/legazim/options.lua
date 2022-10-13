@@ -1,6 +1,8 @@
 local o = vim.o
 local g = vim.g
-
+if '' == '' then
+    
+end
 -- Map <leader> to space
 g.maplocalleader = ' '
 g.mapleader = ' '

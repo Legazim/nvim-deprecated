@@ -3,7 +3,7 @@ if not status_ok then
     return
 end
 
-vim.keymap.set('n', '<leader>bp', ':BufferLinePick<cr>', { silent = true })
+vim.keymap.set('n', '<leader>bp', ':BufferLineTogglePin<cr>', { silent = true })
 vim.keymap.set('n', '<leader>b1', ':lua require("bufferline").go_to_buffer(1, true)<cr>', { silent = true })
 vim.keymap.set('n', '<leader>b2', ':lua require("bufferline").go_to_buffer(2, true)<cr>', { silent = true })
 vim.keymap.set('n', '<leader>b3', ':lua require("bufferline").go_to_buffer(3, true)<cr>', { silent = true })

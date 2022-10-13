@@ -9,6 +9,7 @@ vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', opts)
 
 lualine.setup({
+    create_in_closed_folder = true,
     filters = {
         dotfiles = false,
     },
@@ -16,9 +17,10 @@ lualine.setup({
         adaptive_size = true,
         mappings = {
             list = {
+                { key = { "<2-RightMouse>", "<C-]>" }, action = "" }, -- cd
                 { key = "u", action = "dir_up" },
-                { key = "<Leader>v", action = "vsplit" },
-                { key = "<Leader>s", action = "split" },
+                { key = "<leader>v", action = "vsplit" },
+                { key = "<leader>x", action = "split" },
             },
         },
     },
@@ -35,5 +37,9 @@ lualine.setup({
                 none = " ",
             },
         },
+    },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = true,
     },
 })
