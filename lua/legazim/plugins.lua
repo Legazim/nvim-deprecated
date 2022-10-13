@@ -32,13 +32,24 @@ end
 return packer.startup(function(use)
 
     use { 'wbthomason/packer.nvim' } -- Have packer manage itself
+    use { 'lewis6991/impatient.nvim', config = function() require('impatient') end } -- Load nvim faster
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used by lots of plugins
     use { 'kyazdani42/nvim-web-devicons' } -- Icons
-    use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" } -- Better highlighting
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ":TSUpdate",
+        requires = {
+            'windwp/nvim-ts-autotag', -- Automatically end & rename tags
+            -- Dynamically set commentstring based on cursor location in file
+            'JoosepAlviste/nvim-ts-context-commentstring',
+            'nvim-treesitter/playground',
+        },
+    } -- Better highlighting
 
     -- Navigation
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
+    use { 'ThePrimeagen/harpoon' }
 
     -- Cmp plugins
     use { 'hrsh7th/nvim-cmp' } -- The completion plugin
@@ -67,7 +78,7 @@ return packer.startup(function(use)
 
     -- Visual aids
     use { 'folke/trouble.nvim' } -- Error lens
-    use { 'lewis6991/gitsigns.nvim' } -- See changes since last commit
+    use { 'lewis6991/gitsigns.nvim', config = function() require('gitsigns').setup() end } -- See changes since last commit
     use { 'NvChad/nvim-colorizer.lua' } -- Colors
     use { 'lukas-reineke/indent-blankline.nvim' } -- indent lines
     use { 'p00f/nvim-ts-rainbow' } -- Backets pairs
@@ -77,11 +88,10 @@ return packer.startup(function(use)
     use { 'Mofiqul/dracula.nvim' }
 
     -- UX
-    use { 'echasnovski/mini.nvim' } -- Comment, highlight word on cursor and starting screen
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
     use { 'windwp/nvim-autopairs' } -- Autopairs, integrates with both cmp and treesitter
     -- TODO: Add trimmer for whitespace
-    use { 'folke/which-key.nvim' }
+    use { 'folke/which-key.nvim', config = function() require('which-key').setup() end }
 
     -- navigation
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
@@ -90,6 +100,10 @@ return packer.startup(function(use)
     -- Better terminal
     use { 'akinsho/toggleterm.nvim' } -- Toggle the terminal
     use { 'kdheepak/lazygit.nvim' } -- Better view git
+
+    -- Other plugins
+    use { 'tpope/vim-repeat' }
+    use { 'numToStr/Comment.nvim', config = function() require('Comment').setup() end }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()
