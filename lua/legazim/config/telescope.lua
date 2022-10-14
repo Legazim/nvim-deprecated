@@ -11,6 +11,9 @@ vim.keymap.set('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', {})
 vim.keymap.set('n', '<leader>fh', '<cmd>Telescope help_tags<cr>', {})
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', {})
 vim.keymap.set('n', '<leader>fo', '<cmd>Telescope oldfiles<cr>', {})
+vim.keymap.set('n', '<leader>f;', '<cmd>Telescope harpoon marks<cr>', {})
+vim.keymap.set('n', '<leader>fm', '<cmd>Telescope vim_bookmarks current_file<cr>', {})
+vim.keymap.set('n', '<leader>fa', '<cmd>Telescope vim_bookmarks all<cr>', {})
 vim.api.nvim_set_keymap('n', '<leader>dd', '<cmd>Telescope diagnostics<CR>', { noremap = true, silent = true })
 
 telescope.setup {
@@ -89,3 +92,5 @@ telescope.setup {
         }
     }
 }
+
+telescope.load_extension('vim_bookmarks')

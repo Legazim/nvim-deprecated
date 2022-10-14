@@ -86,9 +86,11 @@ return packer.startup(function(use)
     use { 'numToStr/Comment.nvim', config = pcallSetup('Comment') }
 
     -- Navigation
-    use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
     use { 'ThePrimeagen/harpoon' }
+    use { 'MattesGroeger/vim-bookmarks' } -- Bookmarks
+    use { 'nvim-telescope/telescope.nvim', } -- Fuzzy finder
+    use { 'tom-anders/telescope-vim-bookmarks.nvim' } -- bookmarks in telescope
 
     -- Cmp plugins
     use { 'hrsh7th/nvim-cmp' } -- The completion plugin

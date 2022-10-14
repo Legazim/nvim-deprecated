@@ -7,8 +7,8 @@ vim.g.loaded = 1
 vim.g.loaded_netrwPlugin = 1
 
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<CR>', opts)
-vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
+vim.keymap.set('n', '<leader>e', ':NvimTreeFocus<CR>', opts)
+vim.keymap.set('n', '<C-b>', ':NvimTreeToggle<CR>', opts)
 vim.keymap.set('n', '<C-f>', ':NvimTreeFindFile<CR>', opts)
 
 lualine.setup({
