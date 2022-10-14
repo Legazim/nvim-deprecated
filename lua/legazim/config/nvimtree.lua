@@ -3,6 +3,9 @@ if not status_ok then
     return
 end
 
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
+
 local opts = { noremap = true, silent = true }
 vim.keymap.set('n', '<leader>n', ':NvimTreeFocus<CR>', opts)
 vim.keymap.set('n', '<leader>e', ':NvimTreeToggle<CR>', opts)
@@ -41,5 +44,11 @@ lualine.setup({
     diagnostics = {
         enable = true,
         show_on_dirs = true,
+    },
+    sync_root_with_cwd = true,
+    respect_buf_cwd = true,
+    update_focused_file = {
+        enable = true,
+        update_root = true
     },
 })
