@@ -73,7 +73,7 @@ return packer.startup(function(use)
     -- TODO: Add trimmer for whitespace
     use { 'folke/which-key.nvim', config = pcallSetup('which-key') }
 
-    -- navigation
+    -- Useful motions
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
     use { 'phaazon/hop.nvim' } -- Hop
 
@@ -82,6 +82,7 @@ return packer.startup(function(use)
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     -- Other plugins
+    use { 'echasnovski/mini.nvim' } -- Dashboard and higlight
     use { 'tpope/vim-repeat' }
     use { 'numToStr/Comment.nvim', config = pcallSetup('Comment') }
 

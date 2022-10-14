@@ -12,6 +12,7 @@ indent_blankline.setup {
     space_char_blankline = " ",
     show_current_context = true,
     show_current_context_start = true,
+    filetype_exclude = { "dashboard" }
     -- char_highlight_list = {
     --     "IndentBlanklineIndent1",
     --     "IndentBlanklineIndent2",
@@ -29,12 +30,3 @@ indent_blankline.setup {
 -- vim.cmd [[highlight IndentBlanklineIndent4 guifg=#ff7b33 gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineIndent5 guifg=#94ed54 gui=nocombine]]
 -- vim.cmd [[highlight IndentBlanklineIndent6 guifg=#ff9797 gui=nocombine]]
-
--- indicator_icon = "▎",
--- buffer_close_icon = "",
--- buffer_close_icon = '',
--- modified_icon = "●",
--- close_icon = "",
--- close_icon = '',
--- left_trunc_marker = "",
--- right_trunc_marker = "",
