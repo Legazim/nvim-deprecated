@@ -4,9 +4,6 @@ require('legazim.plugins')
 require('legazim.keybinds')
 require('legazim.colorscheme')
 require('legazim.autocmd')
--- Code completion and LSP
-require('legazim.cmp')
-require('legazim.lsp')
 -- Plugins configuration
 require('legazim.config.autopairs')
 require('legazim.config.bufferline')
@@ -24,3 +21,6 @@ require('legazim.config.toggleterm')
 require('legazim.config.treesitter')
 require('legazim.config.trouble')
 require('legazim.config.harpoon')
+-- Code completion and LSP
+require('legazim.cmp')
+require('legazim.lsp')

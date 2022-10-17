@@ -50,13 +50,6 @@ map('i', '<M-k>', '<C-o>k')
 map('i', '<M-j>', '<C-o>j')
 map('i', '<M-l>', '<C-o>l')
 
--- -- Fix * (Keep the cursor position, don't move to next match)
--- map('n', '*', '*N')
---
--- -- Fix n and N. Keeping cursor in center
--- map('n', 'n', 'nzz')
--- map('n', 'N', 'Nzz')
-
 -- Clear search
 map('n', '<leader>cc', ':noh<CR>')
 

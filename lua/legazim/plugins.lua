@@ -56,7 +56,7 @@ return packer.startup(function(use)
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
-    use { 'petertriho/nvim-scrollbar' } -- Scrollbar
+    use { 'petertriho/nvim-scrollbar', requires = { 'kevinhwang91/nvim-hlslens' } } -- Scrollbar
     use { 'akinsho/bufferline.nvim' } -- Tabs for open buffers
 
     -- Visual aids
