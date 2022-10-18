@@ -7,9 +7,9 @@ mason_tool_installer.setup({
     ensure_installed = {
         -- LSP
         "css-lsp",
-        "html-lsp",
+        -- "html-lsp",
         "intelephense",
-        "json-lsp",
+        -- "json-lsp",
         "lua-language-server",
         "pyright",
         "sqlls",
@@ -17,7 +17,7 @@ mason_tool_installer.setup({
         "python-lsp-server",
         -- Formatter
         "prettier",
-        "stylua",
+        -- "stylua",
         -- Linter
         "eslint_d",
         "black",
@@ -27,8 +27,7 @@ mason_tool_installer.setup({
         "debugpy",
         "php-debug-adapter",
     },
-
     auto_update = true,
     run_on_start = true,
-    start_delay = 3000, -- 3 second delay
+    start_delay = 1000, -- 1 second delay
 })
