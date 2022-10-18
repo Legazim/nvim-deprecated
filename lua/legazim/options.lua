@@ -26,7 +26,7 @@ o.ruler = true
 o.cmdheight = 2
 o.laststatus = 0
 g.foldcolumn = 1
--- o.mouse = 'a'
+o.mouse = 'a'
 
 -- Editing experience
 o.expandtab = true
@@ -51,7 +51,7 @@ o.swapfile = false
 o.splitbelow = true
 o.splitright = true
 
--- Coc
+-- Cmp
 o.shortmess = o.shortmess .. 'c'
 
 -- Always show the signcolumn, otherwise it would shift the text each time

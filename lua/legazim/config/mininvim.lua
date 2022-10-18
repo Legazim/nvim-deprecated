@@ -12,4 +12,6 @@ if not cursor_ok then
     return
 else
     cursorword.setup()
+    vim.cmd [[au TermOpen * lua vim.b.minicursorword_disable = true]]
+    vim.cmd [[autocmd Filetype Nvimtree lua vim.b.minicursorword_disable = true]]
 end

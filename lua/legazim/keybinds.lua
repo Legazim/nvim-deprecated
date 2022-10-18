@@ -20,19 +20,25 @@ map('n', '<M-Up>', ':resize +2<CR>')
 map('n', '<M-Right>', ':vertical resize +2<CR>')
 map('n', '<M-Left>', ':vertical resize -2<CR>')
 
--- -- Better window navigation
--- map('n', '<C-h>', '<C-w>h')
--- map('n', '<C-j>', '<C-w>j')
--- map('n', '<C-k>', '<C-w>k')
--- map('n', '<C-l>', '<C-w>l')
+-- Better window navigation
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
 
 -- Shortcut to normal mode
 map('i', 'jk', '<ESC>')
 map('i', 'kj', '<ESC>')
 
 -- Buffer navigation
-map('n', '<C-l>', ':bn<Cr>')
-map('n', '<C-h>', ':bp<Cr>')
+map('n', '<m-l>', ':bn<Cr>')
+map('n', '<m-h>', ':bp<Cr>')
+
+-- Quit buffer
+map('n', '<C-q>', ':bd<Cr>')
+
+-- Save file
+map('n', '<C-s>', ':w<CR>')
 
 -- Better tabbing
 map('n', '<Tab>', '>>')
@@ -59,12 +65,6 @@ map('n', '<leader>cc', ':noh<CR>')
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')
 map('n', '<leader>O', 'O<ESC>')
-
--- Save file
-map('n', '<C-s>', ':w<CR>')
-
--- Quit buffer
-map('n', '<C-q>', ':bd<Cr>')
 
 -- Comparing files
 map('n', '<leader>da', ':windo diffthis<Cr>')
