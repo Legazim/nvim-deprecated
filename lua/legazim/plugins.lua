@@ -76,6 +76,7 @@ return packer.startup(function(use)
     -- Useful motions
     use { 'mg979/vim-visual-multi' } -- Multiple Cursors
     use { 'phaazon/hop.nvim' } -- Hop
+    use { 'sar/bbye.nvim', opt = true, cmd = { 'Bdelete', 'Bwipeout' } }
 
     -- Better terminal
     use { 'akinsho/toggleterm.nvim' } -- Toggle the terminal

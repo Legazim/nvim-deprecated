@@ -35,6 +35,8 @@ map('n', '<m-l>', ':bn<Cr>')
 map('n', '<m-h>', ':bp<Cr>')
 
 -- Quit buffer
+map('n', '<leader>q', ':Bdelete<Cr>')
+map('n', '<leader>Q', ':Bwipeout<Cr>')
 map('n', '<C-q>', ':bd<Cr>')
 
 -- Save file
