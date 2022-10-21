@@ -6,23 +6,19 @@ end
 mason_tool_installer.setup({
     ensure_installed = {
         -- LSP
-        "css-lsp",
-        -- "html-lsp",
+        -- "css-lsp",
         "intelephense",
-        -- "json-lsp",
         "lua-language-server",
         "pyright",
         "sqlls",
-        "typescript-language-server",
         "python-lsp-server",
         -- Formatter
         "prettier",
-        -- "stylua",
         -- Linter
+        "eslint-lsp",
         "eslint_d",
         "black",
         "shellcheck",
-        "tflint",
         -- DAP
         "debugpy",
         "php-debug-adapter",

@@ -29,11 +29,6 @@ toggleterm.setup {
             background = "Normal",
         },
     },
-    winblend = 3,
-    -- highlights = {
-    --     border = "Normal",
-    --     background = "Normal",
-    -- }
 }
 
 function _G.set_terminal_keymaps()
