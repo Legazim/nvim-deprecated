@@ -14,6 +14,10 @@ end
 
 map('', '<C-z>', CtrlZ())
 
+-- Shortcut to normal mode
+map('i', 'jk', '<ESC>')
+map('i', 'kj', '<ESC>')
+
 -- Use Alt + hjkl to resize windows
 map('n', '<M-Down>', ':resize -2<CR>')
 map('n', '<M-Up>', ':resize +2<CR>')
@@ -25,10 +29,6 @@ map('n', '<C-h>', '<C-w>h')
 map('n', '<C-j>', '<C-w>j')
 map('n', '<C-k>', '<C-w>k')
 map('n', '<C-l>', '<C-w>l')
-
--- Shortcut to normal mode
-map('i', 'jk', '<ESC>')
-map('i', 'kj', '<ESC>')
 
 -- Buffer navigation
 map('n', '<m-l>', ':bn<Cr>')

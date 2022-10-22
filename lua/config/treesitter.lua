@@ -8,7 +8,7 @@ configs.setup({
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = { enable = true, disable = { "css" }, },
     autopairs = { enable = true, },
-    indent = { enable = true, disable = { "python", "css" } },
+    indent = { enable = true, disable = { "python", "css", "html" } },
     rainbow = {
         enable = true,
     },
@@ -53,3 +53,8 @@ vim.cmd([[ autocmd FileType * highlight rainbowcol3 guifg=#87cefa]])
 vim.cmd([[ autocmd FileType * highlight rainbowcol4 guifg=#ff7b33]])
 vim.cmd([[ autocmd FileType * highlight rainbowcol5 guifg=#94ed54]])
 vim.cmd([[ autocmd FileType * highlight rainbowcol6 guifg=#ff9797]])
+
+local context_ok, treesitter_context = pcall(require, 'treesitter-context')
+if context_ok then
+    treesitter_context.setup()
+end

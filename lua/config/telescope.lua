@@ -92,5 +92,3 @@ telescope.setup {
         }
     }
 }
-
-telescope.load_extension('vim_bookmarks')

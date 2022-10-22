@@ -1,5 +1,4 @@
 vim.opt.list = true
--- vim.opt.listchars:append "space:⋅"
 vim.opt.listchars:append "eol:↴"
 
 local status_ok, indent_blankline = pcall(require, 'indent_blankline')
@@ -12,7 +11,7 @@ indent_blankline.setup {
     space_char_blankline = " ",
     show_current_context = true,
     show_current_context_start = true,
-    filetype_exclude = { "dashboard" }
+    filetype_exclude = { 'dashboard', 'help' }
     -- char_highlight_list = {
     --     "IndentBlanklineIndent1",
     --     "IndentBlanklineIndent2",
@@ -22,11 +21,3 @@ indent_blankline.setup {
     --     "IndentBlanklineIndent6",
     -- },
 }
-
--- vim.opt.termguicolors = true
--- vim.cmd [[highlight IndentBlanklineIndent1 guifg=#ffd700 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent2 guifg=#da70d6 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent3 guifg=#87cefa gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent4 guifg=#ff7b33 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent5 guifg=#94ed54 gui=nocombine]]
--- vim.cmd [[highlight IndentBlanklineIndent6 guifg=#ff9797 gui=nocombine]]

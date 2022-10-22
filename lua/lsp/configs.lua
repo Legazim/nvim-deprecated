@@ -14,10 +14,10 @@ mason.setup({
 
 for _, server in pairs(servers) do
     local opts = {
-        on_attach = require("legazim.lsp.handlers").on_attach,
-        capabilities = require("legazim.lsp.handlers").capabilities,
+        on_attach = require("lsp.handlers").on_attach,
+        capabilities = require("lsp.handlers").capabilities,
     }
-    local has_custom_opts, server_custom_opts = pcall(require, "legazim.lsp.settings." .. server)
+    local has_custom_opts, server_custom_opts = pcall(require, "lsp.settings." .. server)
     if has_custom_opts then
         opts = vim.tbl_deep_extend("force", opts, server_custom_opts)
     end

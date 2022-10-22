@@ -1,4 +1,16 @@
+-- Colorscheme
+vim.cmd [[
+try
+    colorscheme tokyonight
+catch /^Vim\%((\a\+)\)\=:E185/
+    colorscheme default
+    set background=dark
+endtry
+]]
+-- Format on save
 vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+
+-- No numbers on terminals
 vim.cmd [[autocmd TermOpen * setlocal nonumber norelativenumber]]
 
 local num_au = vim.api.nvim_create_augroup('legazim', { clear = true })
