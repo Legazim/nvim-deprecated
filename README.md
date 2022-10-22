@@ -1,18 +1,40 @@
-Depedências
-------------
+# Depedências
 
-### [Mingw toolchain](https://www.mingw-w64.org/)
+---
 
-Compilador em C **(Só é necessário para usuários de Windows)**
+### [NVIM](https://github.com/neovim/neovim/wiki/Installing-Neovim)
+
+**macOS Homebrew** or **Linuxbrew**
+
+```
+brew install neovim
+```
+
+**Windows Powershell Winget**
+
+```
+winget install Neovim.Neovim
+```
 
 **Windows Chocolatey**
 
 ```
-$ choco install mingw
+choco install neovim
 ```
 
-Recomendações
-------------
+### [Mingw toolchain](https://www.mingw-w64.org/) **(Só é necessário para usuários de Windows)**
+
+Compilador em C
+
+**Windows Chocolatey**
+
+```
+choco install mingw
+```
+
+# Recomendações
+
+---
 
 ### [Lazy git](https://github.com/jesseduffield/lazygit)
 
@@ -23,13 +45,13 @@ Caso não queira usar desabilite o seu atalho no arquivo [keybinds.lua](https://
 **macOS Homebrew** or **Linuxbrew**
 
 ```
-$ brew install jesseduffield/lazygit/lazygit
+brew install jesseduffield/lazygit/lazygit
 ```
 
 **Windows Chocolatey**
 
 ```
-$ choco install lazygit
+choco install lazygit
 ```
 
 ### [Ripgrep](https://github.com/BurntSushi/ripgrep)
@@ -39,11 +61,11 @@ Para melhorar o mecanismo de pesquisa do [Telescope](https://github.com/nvim-tel
 **macOS Homebrew** or **Linuxbrew**
 
 ```
-$ brew install ripgrep
+brew install ripgrep
 ```
 
 **Windows Chocolatey**
 
 ```
-$ choco install ripgrep
+choco install ripgrep
 ```
