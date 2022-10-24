@@ -53,22 +53,30 @@ return packer.startup(function(use)
     use { 'lewis6991/impatient.nvim', config = function() require('impatient') end } -- Load nvim faster
     use { 'kyazdani42/nvim-web-devicons' } -- Icons
 
+    -- User interface
+    use { 'goolord/alpha-nvim' }
     use { 'folke/tokyonight.nvim' } -- Theme
 
+    -- Motions
+    use { 'sar/bbye.nvim', opt = true, cmd = { 'Bdelete', 'Bwipeout' } }
+
     -- Navigation
+    use { 'kyazdani42/nvim-tree.lua', } -- File explorer
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
+    use { 'ThePrimeagen/harpoon' } -- Bookmark and navigate files
 
     -- Git
     use { 'lewis6991/gitsigns.nvim', config = pcallSetup('gitsigns') } -- Git made easy
     use { 'kdheepak/lazygit.nvim' } -- Better view git
 
-    -- Easy formating maps
+    -- Easy formating
     use { 'tpope/vim-repeat' }
     use { 'numToStr/Comment.nvim', config = pcallSetup('Comment') } -- Commenting lines gcc
     use { 'tpope/vim-surround' } -- parentheses, brackets, quotes etc
 
     -- UI
     use { 'nvim-lualine/lualine.nvim' } -- Linebar
+    use { 'akinsho/bufferline.nvim' } -- Tabs for open buffers
     use { 'folke/which-key.nvim', config = pcallSetup('which-key') } -- Helper
 
     -- Cmp plugins
@@ -89,6 +97,10 @@ return packer.startup(function(use)
     use { 'williamboman/mason-lspconfig.nvim' } -- Lsp integration with Mason
     use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
     use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters and linters
+
+    -- Usefull plugins
+    use { 'folke/trouble.nvim' } -- Lsp explorer
+    use { 'akinsho/toggleterm.nvim' } -- Toggle the terminal
 
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" } -- Better highlighting
