@@ -58,6 +58,7 @@ return packer.startup(function(use)
     use { 'folke/tokyonight.nvim' } -- Theme
 
     -- Motions
+    use { 'phaazon/hop.nvim' } -- Hop
     use { 'sar/bbye.nvim', opt = true, cmd = { 'Bdelete', 'Bwipeout' } }
 
     -- Navigation
