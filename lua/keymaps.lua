@@ -64,6 +64,9 @@ map('n', '<leader>cc', ':noh<CR>')
 -- Insert line
 -- map('n', 'K', 'i<Cr><Esc>k$')
 
+-- Outline
+map('n', '<leader>ç', ':SymbolsOutline<cr>')
+
 -- leader-o/O inserts blank line below/above
 map('n', '<leader>o', 'o<ESC>')
 map('n', '<leader>O', 'O<ESC>')

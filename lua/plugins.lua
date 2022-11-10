@@ -50,7 +50,7 @@ end
 return packer.startup(function(use)
     use { 'wbthomason/packer.nvim' } -- Have packer manage itself
     use { 'nvim-lua/plenary.nvim' } -- Useful lua functions used by lots of plugins
-    use { 'lewis6991/impatient.nvim', config = function() require('impatient') end } -- Load nvim faster
+    use { 'lewis6991/impatient.nvim', } -- Load nvim faster
     use { 'kyazdani42/nvim-web-devicons' } -- Icons
 
     -- User interface
@@ -65,10 +65,6 @@ return packer.startup(function(use)
     use { 'kyazdani42/nvim-tree.lua', } -- File explorer
     use { 'nvim-telescope/telescope.nvim' } -- Fuzzy finder
     use { 'ThePrimeagen/harpoon' } -- Bookmark and navigate files
-
-    -- Git
-    use { 'lewis6991/gitsigns.nvim', config = pcallSetup('gitsigns') } -- Git made easy
-    use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     -- Easy formating
     use { 'tpope/vim-repeat' }
@@ -99,9 +95,16 @@ return packer.startup(function(use)
     use { 'WhoIsSethDaniel/mason-tool-installer.nvim' }
     use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters and linters
 
-    -- Usefull plugins
+    -- Usefull lsp plugins
     use { 'folke/trouble.nvim' } -- Lsp explorer
+    use { 'simrat39/symbols-outline.nvim', config = pcallSetup('symbols-outline') }
+
+    -- Terminal
     use { 'akinsho/toggleterm.nvim' } -- Toggle the terminal
+
+    -- Git
+    use { 'lewis6991/gitsigns.nvim', config = pcallSetup('gitsigns') } -- Git made easy
+    use { 'kdheepak/lazygit.nvim' } -- Better view git
 
     -- Treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ":TSUpdate" } -- Better highlighting

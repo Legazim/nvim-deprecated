@@ -1,6 +1,7 @@
 -- Basic settings
 require('options')
 require('plugins')
+require('impatient')
 require('keymaps')
 require('autocmd')
 -- Completion and lsp

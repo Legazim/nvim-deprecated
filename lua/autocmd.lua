@@ -9,7 +9,7 @@ endtry
 ]]
 
 -- Format on save
-vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- No numbers on terminals
 vim.cmd [[autocmd TermOpen * setlocal nonumber norelativenumber]]
